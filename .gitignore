@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+dist/
+validation/
+*.opju
+*.opj
+recovery.json
+bridge.json
+last_error.json
+*.log
+*.zip
