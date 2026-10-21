@@ -1,9 +1,11 @@
 from pathlib import Path
+import os
 import shutil,json,hashlib,zipfile,sys
 ROOT=Path(__file__).resolve().parents[1]
 OUTPUTS=ROOT.parents[1]/'outputs'
 RELEASE=OUTPUTS/'绘图器_1.0'
-DESKTOP=Path(r'E:\Desktop\文件\工具\绘图器\绘图器 1.0')
+# Optional packaging destination; avoids publishing a maintainer's desktop path.
+DESKTOP=Path(os.environ["PLOTTER_DESKTOP"]).expanduser().resolve() if os.environ.get("PLOTTER_DESKTOP") else ROOT/'local-release'/'绘图器 1.0'
 
 def digest(path): return hashlib.sha256(path.read_bytes()).hexdigest().upper()
 
@@ -103,7 +105,7 @@ XPS 保留现有分峰、包络、背景和实测曲线；XRD 支持单独绘图
 已提供 12 个标准 MCP 工具，并验证与桌面窗口共用工作区。源码、便携程序、配置和测试记录一起备份。
 
 测试期间的 Origin 会话事件：早期探测意外复用了并关闭了原有 FTIR 窗口，没有保存或覆盖原工程文件。
-随后已从 E:\Desktop\小图\第一体系\FTIR.opju 恢复打开，确认有 3 个页面；原窗口当时是否有未保存修改无法确认。
+曾在本机进行项目恢复检查；公开版本不包含该项目、路径或测试数据。
 新版增加新进程、空工程、工程身份和多窗口校验，禁止退出已有会话。相应防护有独立回归测试。
 '''
     write(RELEASE/'本轮优化说明.txt',changes)

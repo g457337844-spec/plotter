@@ -1,0 +1,32 @@
+{
+  "project": "Plotter",
+  "include": [
+    "README.md",
+    "README.txt",
+    "LICENSE",
+    ".gitignore",
+    "main.py",
+    "mcp_entry.py",
+    "mcp_version_info.txt",
+    "version_info.txt",
+    "requirements.txt",
+    "requirements-dev.txt",
+    "build.spec",
+    "assets",
+    "studio",
+    "tests",
+    "tools/make_icon.py",
+    "CONTRIBUTING.md",
+    "SECURITY.md",
+    "docs/ECOSYSTEM.md",
+    "oss-release.json",
+    ".github/workflows/ci.yml"
+  ],
+  "exclude": [
+    "tests/probe_dlls.py",
+    "tests/probe_manual_defaults.py",
+    "tests/probe_native_titles.py",
+    "**/__pycache__/**"
+  ],
+  "manual_review": []
+}
