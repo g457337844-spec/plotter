@@ -19,7 +19,8 @@
     "CONTRIBUTING.md",
     "SECURITY.md",
     "docs/ECOSYSTEM.md",
-    "oss-release.json"
+    "oss-release.json",
+    ".github/workflows/ci.yml"
   ],
   "exclude": [
     "tests/probe_dlls.py",
