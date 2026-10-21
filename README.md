@@ -42,6 +42,10 @@ python -m PyInstaller --noconfirm build.spec
 完整 `dist/Plotter` 文件夹是便携软件。SVG 是图标源文件，PNG 与多尺寸 ICO 由构建工具生成。
 图形界面和 MCP 共用 `studio/service.py` 的串行服务，Origin COM 只在一个线程中操作。
 
+## 测试样本配置
+
+自动化测试不附带私人实验文件。运行需要真实 XPS/XRD 样本的验证脚本前，请自行设置环境变量 `PLOTTER_TEST_XPS`、`PLOTTER_TEST_XRD`；分层/参考卡验证还使用 `PLOTTER_TEST_XRD_DIR`。普通核心单元测试不依赖个人目录。未提供样本时，GUI 相关测试会跳过；这不等于真实 Origin 验证通过。
+
 ## 验证
 
 ```powershell
