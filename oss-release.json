@@ -25,12 +25,6 @@
     "tests/probe_dlls.py",
     "tests/probe_manual_defaults.py",
     "tests/probe_native_titles.py",
-    "tests/validate_real_origin.py",
-    "tests/validate_stacks.py",
-    "tests/validate_mcp_gui.py",
-    "tests/validate_packaged_ui.py",
-    "tests/validate_mcp.py",
-    "tests/test_gui.py",
     "**/__pycache__/**"
   ],
   "manual_review": []
