@@ -1,10 +1,11 @@
+import os
 import sys,json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]; sys.path.insert(0,str(ROOT))
 from studio.service import Broker,atomic_json
 from studio.origin import execute,snapshot
 
-DATA=Path(r'E:\Desktop\表征\第二体系\XRD\T TC C CAG\高树良-XRD-5°-四个样品')
+DATA=Path(os.environ.get('PLOTTER_TEST_XRD_DIR', ''))
 
 def main():
     out=ROOT/'validation'/'title_probe'; broker=Broker(recovery=False,preview_root=out); report={}
