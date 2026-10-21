@@ -39,3 +39,10 @@
 构建电脑 PATH 中其他程序（如 Poppler）的 ICU 不能混入；build.spec 已处理这一冲突。
 
 项目源码和便携运行库应一并备份。旧版 XPS/XRD 的原始代码另有独立备份，未被本版覆盖。
+
+
+## 关联项目与开源说明
+
+[Origin Spectra MCP](https://github.com/g457337844-spec/origin-spectra-mcp) 是工具组的核心 MCP 服务；[Avantage MCP](https://github.com/g457337844-spec/avantage-mcp) 提供光谱处理和曲线导出。现有能力与跨工具一键绘图目标见 [docs/ecosystem.md](docs/ecosystem.md)。独立 Plotter 已能直接连接 Origin，不必再启动 Origin Spectra MCP。
+
+[MIT 许可](LICENSE) · [第三方说明](NOTICE) · [贡献指南](CONTRIBUTING.md) · [安全说明](SECURITY.md)。Origin 商业软件不随项目提供。

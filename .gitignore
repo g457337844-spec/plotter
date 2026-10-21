@@ -12,3 +12,20 @@ bridge.json
 last_error.json
 *.log
 *.zip
+
+# Local credentials and private scientific data
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.dll
+*.VGD
+*.vgd
+*.VGP
+*.vgp
+*.VGT
+*.vgt
+*.DATA/
+*.data/

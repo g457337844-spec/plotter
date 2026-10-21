@@ -8,8 +8,9 @@
 
 ## 下载与运行
 
-从 [Releases](../../releases) 下载 **Plotter-1.0-Windows-x64.zip**，完整解压后双击 `软件/绘图器.exe`。
-保留同目录的 `_internal` 和 `绘图器-MCP.exe`。便携版无需安装 Python，需要已安装 Origin。
+本轮先公开源码，请按下方“源码运行与构建”运行。历史 v1.0 便携包暂存为发布草稿；完成打包依赖许可说明与复验后再公开附件。它不代表新发布的开源构建。
+
+便携包的运行方式为完整解压后双击 `软件/绘图器.exe`，保留同目录的 `_internal` 和 `绘图器-MCP.exe`。便携版无需安装 Python，需要已安装 Origin。
 
 ## 主要功能
 
@@ -53,4 +54,11 @@ python tests/validate_packaged_ui.py
 真实 Origin 集成测试使用本机样本路径，需要按测试电脑调整。测试会验证独立进程和空工程再绘图。
 已在 Windows 10 x64 / Origin 10.100178 上验证；其他电脑与版本尚未实测。
 
-本仓库为私有软件备份。可运行程序和源码归档放在 Releases，构建目录和实验工作区不纳入源码提交。
+本仓库的原创源码采用 MIT 许可。构建目录、私人数据与实验工作区不纳入源码提交。历史 v1.0 附件早于本次开源整理，源码与许可说明以默认分支为准。
+
+
+## 关联项目与开源说明
+
+[Origin Spectra MCP](https://github.com/g457337844-spec/origin-spectra-mcp) 是工具组的核心 MCP 服务；[Avantage MCP](https://github.com/g457337844-spec/avantage-mcp) 提供光谱处理和曲线导出。现有能力与跨工具一键绘图目标见 [docs/ecosystem.md](docs/ecosystem.md)。独立 Plotter 已能直接连接 Origin，不必再启动 Origin Spectra MCP。
+
+[MIT 许可](LICENSE) · [第三方说明](NOTICE) · [贡献指南](CONTRIBUTING.md) · [安全说明](SECURITY.md)。Origin 商业软件不随项目提供。

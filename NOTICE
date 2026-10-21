@@ -1,0 +1,6 @@
+Plotter third-party and product notices
+
+Original project source and artwork: Copyright (c) 2026 g457337844-spec, MIT License.
+Dependencies (including PySide6/Qt, openpyxl, pywin32 and the MCP Python SDK) retain their own licenses. The project MIT license does not relicense these dependencies.
+PySide6/Qt is available under LGPL/GPL or commercial terms depending on the component. Binary redistributors must preserve the applicable license texts, notices and requirements for the actual bundled components. See https://doc.qt.io/qtforpython-6/licenses.html .
+Origin/OriginPro is separately licensed commercial software and is not included. No affiliation or endorsement by OriginLab or OpenAI is claimed.
