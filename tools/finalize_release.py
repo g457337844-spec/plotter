@@ -1,12 +1,14 @@
 """Collect verified release evidence without touching running application files."""
 from pathlib import Path
+import os
 import hashlib,json,marshal,shutil,sys,time,types,zipfile
 from PyInstaller.archive.readers import CArchiveReader
 
 ROOT=Path(__file__).resolve().parents[1]
 OUTPUTS=ROOT.parents[1]/'outputs'
 RELEASE=OUTPUTS/'绘图器_1.0'
-DESKTOP=Path(r'E:\Desktop\文件\工具\绘图器\绘图器 1.0')
+# Optional packaging destination; avoids publishing a maintainer's desktop path.
+DESKTOP=Path(os.environ["PLOTTER_DESKTOP"]).expanduser().resolve() if os.environ.get("PLOTTER_DESKTOP") else ROOT/'local-release'/'绘图器 1.0'
 
 def digest(path):
     h=hashlib.sha256()
