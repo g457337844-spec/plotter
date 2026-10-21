@@ -12,7 +12,7 @@ Keep the three repositories separate; use [ECOSYSTEM.md](ECOSYSTEM.md) to docume
 
 1. Inventory **all committed files and commit history**, including deleted files, commit messages and tags. Current-file redaction does not erase prior snapshots.
 2. Inspect for secrets, keys, tokens, passwords, absolute machine paths, local network addresses, usernames, datasets, identifiable samples and unpublished internal project notes. Rotate any credential that has been exposed.
-3. Resolve license ownership, derivative-code attribution, asset licenses and proprietary software EULA obligations. Two sibling repositories do not presently include a LICENSE file.
+3. MIT has been selected by the repository owner (2026-10-21) and is included in this review branch. Preserve correct copyright attribution and resolve all separately owned assets and proprietary software obligations before distribution.
 4. Create a **new clean-history public export** from an audited allowlist. Do not simply change the visibility of this historical private repository. Include no Git history, binary artifacts, local configuration or generated logs from the private workspace.
 5. Validate setup on a clean Windows environment, run tests, issue a real signed/tagged release if applicable, and keep an accurate test-status statement.
 6. Review GitHub Actions security (minimal permissions, no untrusted pull-request command execution), maintainers, contributions, issue templates and security reporting.
