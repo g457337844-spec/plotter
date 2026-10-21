@@ -1,3 +1,4 @@
+import os
 """Exercise the packaged UI and real Origin through the public MCP interface.
 
 Leaves the tested application and its newly created Origin graphs open for review.
@@ -12,8 +13,8 @@ from studio.service import app_data,atomic_json
 from studio.bridge import remote_call
 from studio.origin import origin_processes
 
-XPS=r'E:\Desktop\小图\第二体系\表征\XPS\TC.xlsx'
-XRD=r'E:\Desktop\表征\第二体系\XRD\T TC C CAG\高树良-XRD-5°-四个样品\1.txt'
+XPS=os.environ.get('PLOTTER_TEST_XPS', '')
+XRD=os.environ.get('PLOTTER_TEST_XRD', '')
 
 def content(result):
     assert not result.isError,str(result)
