@@ -1,12 +1,13 @@
 from __future__ import annotations
+import os
 import asyncio, json, sys
 from pathlib import Path
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
 ROOT=Path(__file__).resolve().parents[1]
-XPS=r'E:\Desktop\小图\第二体系\表征\XPS\TC.xlsx'
-XRD=r'E:\Desktop\表征\第二体系\XRD\T TC C CAG\高树良-XRD-5°-四个样品\1.txt'
+XPS=os.environ.get('PLOTTER_TEST_XPS', '')
+XRD=os.environ.get('PLOTTER_TEST_XRD', '')
 
 def content(result):
     assert not result.isError, str(result)
