@@ -11,11 +11,13 @@ from studio.gui import MainWindow
 from studio.service import Broker
 
 ROOT=Path(__file__).resolve().parents[1]
-XPS=r'E:\Desktop\小图\第二体系\表征\XPS\TC.xlsx'
-XRD=r'E:\Desktop\表征\第二体系\XRD\T TC C CAG\高树良-XRD-5°-四个样品\1.txt'
+XPS=os.environ.get('PLOTTER_TEST_XPS', '')
+XRD=os.environ.get('PLOTTER_TEST_XRD', '')
 
 @pytest.fixture
 def window():
+    if not XPS or not XRD or not Path(XPS).is_file() or not Path(XRD).is_file():
+        pytest.skip('Set PLOTTER_TEST_XPS and PLOTTER_TEST_XRD to existing local fixture files')
     app=QApplication.instance() or QApplication([])
     if not QFontDatabase.families():
         for name in ('msyh.ttc','segoeui.ttf','msyhbd.ttc'):
